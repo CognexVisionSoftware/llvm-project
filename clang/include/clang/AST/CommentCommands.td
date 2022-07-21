@@ -200,7 +200,7 @@ defm Uml : VerbatimBlockCommand<"startuml", "enduml">;
 // Actually not verbatim blocks, we should also parse commands within them.
 defm Internal   : VerbatimBlockCommand<"internal", "endinternal">;
 // TODO: conflicts with HeaderDoc link, /link.
-//defm Link       : VerbatimBlockCommand<"link", "endlink">;
+defm Link       : VerbatimBlockCommand<"link", "endlink">;
 defm ParBlock   : VerbatimBlockCommand<"parblock", "endparblock">;
 defm SecRefList : VerbatimBlockCommand<"secreflist", "endsecreflist">;
 
@@ -213,7 +213,7 @@ defm FBrace   : VerbatimBlockCommand<"f{", "f}">; // LaTeX environment
 
 // HeaderDoc commands
 defm Textblock    : VerbatimBlockCommand<"textblock", "/textblock">;
-defm Link         : VerbatimBlockCommand<"link", "/link">;
+// defm Link         : VerbatimBlockCommand<"link", "endlink">;
 
 //===----------------------------------------------------------------------===//
 // VerbatimLineCommand
